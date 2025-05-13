@@ -1,0 +1,50 @@
+# --- Python general ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.bak
+*.tmp
+
+# --- Entorno virtual ---
+venv/
+ENV/
+env/
+.Python
+
+# --- Datasets (no se suben por peso) ---
+dataset/
+
+# --- Carpetas temporales (se crean por código si faltan) ---
+temp_images/
+debug/
+
+# --- Archivos pesados y de modelos ---
+*.h5
+*.pb
+*.zip
+*.rar
+*.tar
+*.gz
+*.whl
+*.log
+
+# --- Archivos del sistema/editor ---
+.DS_Store
+.idea/
+.vscode/
+
+# --- Seguridad y configuración ---
+.env
+*.key
+*.pem
+*.crt
+
+# --- JSON en general, pero permitimos la credencial OCR específica ---
+*.json
+!credentials/
+!credentials/vision-service.json
+
+# Ignorar credenciales OCR
+credentials/vision-service.json
