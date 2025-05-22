@@ -13,7 +13,7 @@ ENV/
 env/
 .Python
 
-# --- Datasets (no se suben por peso) ---
+# --- Datasets (no se suben por peso, excepto si necesitas incluir alguno explícitamente) ---
 dataset/
 
 # --- Carpetas temporales (se crean por código si faltan) ---
@@ -21,9 +21,9 @@ temp_images/
 debug/
 
 # --- Archivos pesados y de modelos ---
-*.h5
+# Permitir modelo entrenado
+# *.h5 ← DESCOMENTADO PARA PERMITIR EL MODELO
 *.pb
-*.zip
 *.rar
 *.tar
 *.gz
@@ -41,10 +41,8 @@ debug/
 *.pem
 *.crt
 
-# --- JSON en general, pero permitimos la credencial OCR específica ---
+# --- JSON en general ---
 *.json
+# Permitimos credenciales OCR específicas
 !credentials/
 !credentials/vision-service.json
-
-# Ignorar credenciales OCR
-credentials/vision-service.json

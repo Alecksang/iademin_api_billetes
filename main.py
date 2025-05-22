@@ -3,6 +3,7 @@ import os
 import uuid
 from typing import List
 from fastapi import FastAPI, UploadFile, File
+
 from fastapi.responses import JSONResponse
 
 from utils.ocr_utils import extraer_serial
